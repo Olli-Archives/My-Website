@@ -20,6 +20,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "enzyme": "^3.9.0",
+    "jest": "^24.8.0",
     "prettier": "^1.17.0"
   },
   "keywords": [
