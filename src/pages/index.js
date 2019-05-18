@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Img from 'gatsby-image';
 import './index.css';
 import Stack from '../components/Stack';
+import Tab from '../components/Tab';
 
 
 const IndexPage = () => (
@@ -68,6 +69,27 @@ firebase: file(relativePath: {eq:"firebase.png"}){
     }
   }
 }
+github: file(relativePath: {eq:"github.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+jest: file(relativePath: {eq:"jest.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+npm: file(relativePath: {eq:"npm.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
   }
     `} render={(data) => {
       const frontEnd = {
@@ -80,7 +102,7 @@ firebase: file(relativePath: {eq:"firebase.png"}){
       }
       const tools = {
         title:'TOOLS',
-        imgArray: [data.CSS.childImageSharp.fluid, data.react.childImageSharp.fluid, data.html.childImageSharp.fluid ]
+        imgArray: [data.github.childImageSharp.fluid, data.jest.childImageSharp.fluid, data.npm.childImageSharp.fluid ]
       }
       console.log('data', data);
       return (
@@ -119,24 +141,7 @@ firebase: file(relativePath: {eq:"firebase.png"}){
             backgroundColor: 'silver'
 
           }}>
-            <div className='tab' style={
-              {
-                width: '125px',
-                backgroundColor: 'blue',
-                writingMode: 'vertical-rl',
-                textOrientation: 'upright',
-                textAlign: 'center',
-                display: 'flex'
-
-
-              }
-            }>
-              <h2 style={{
-                alignSelf: 'center',
-                margin: 'auto',
-                fontSize: '50px'
-              }}>MY STACK</h2>
-            </div>
+            <Tab title='MY STACK'/>
             <section className='stack' style={
               {
                 display: 'flex',
