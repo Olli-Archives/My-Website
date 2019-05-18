@@ -5,6 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Img from 'gatsby-image';
 import './index.css';
+import Stack from '../components/Stack';
 
 
 const IndexPage = () => (
@@ -39,8 +40,48 @@ html: file(relativePath: {eq:"html.png"}){
     }
   }
 }
+node: file(relativePath: {eq:"node.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+mongo: file(relativePath: {eq:"mongo.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+express: file(relativePath: {eq:"express.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+firebase: file(relativePath: {eq:"firebase.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
   }
     `} render={(data) => {
+      const frontEnd = {
+        title:'FRONT END',
+        imgArray: [data.CSS.childImageSharp.fluid, data.react.childImageSharp.fluid, data.html.childImageSharp.fluid ]
+      };
+      const backEnd = {
+        title:'BACK END',
+        imgArray: [data.node.childImageSharp.fluid, data.mongo.childImageSharp.fluid, data.express.childImageSharp.fluid, data.firebase.childImageSharp.fluid ]
+      }
+      const tools = {
+        title:'TOOLS',
+        imgArray: [data.CSS.childImageSharp.fluid, data.react.childImageSharp.fluid, data.html.childImageSharp.fluid ]
+      }
       console.log('data', data);
       return (
         <Layout>
@@ -103,31 +144,9 @@ html: file(relativePath: {eq:"html.png"}){
 
               }
             }>
-              <div className='front-end-stack' style={{
-                backgroundColor: 'green',
-                flexGrow: 1,
-                textAlign: 'center'
-
-              }}>
-                <h2 style={{
-                  marginTop: '30px',
-                  fontSize: '30px'
-                }}>FRONT END</h2>
-                <ul style={
-                  {
-                    listStyle: 'none'
-                  }}>
-                  <li ><Img fluid={data.CSS.childImageSharp.fluid} /></li>
-                  <li ><Img fluid={data.react.childImageSharp.fluid} /></li>
-                  <li ><Img fluid={data.html.childImageSharp.fluid} /></li>
-                </ul>
-              </div>
-              <div className='back-end-stack' style={{ backgroundColor: 'red', flexGrow: 1 }}>
-                <h2>BACK END</h2>
-              </div>
-              <div className='tools' style={{ backgroundColor: 'silver', flexGrow: 1 }}>
-                <h2>TOOLS</h2>
-              </div>
+            <Stack title={frontEnd.title} imgArray={frontEnd.imgArray}/>
+            <Stack title={backEnd.title} imgArray={backEnd.imgArray}/>
+            <Stack title={tools.title} imgArray={tools.imgArray}/>
             </section>
           </section>
 
