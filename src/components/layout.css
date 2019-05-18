@@ -398,7 +398,7 @@ figure {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-.gatsby-image-wrapper {
+.profile .gatsby-image-wrapper {
   min-width:400px;
 }
 pre {
