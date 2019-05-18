@@ -68,6 +68,9 @@ mark {
   background-color: #ff0;
   color: #000;
 }
+main{
+  margin:0 20px 0 20px;
+}
 small {
   font-size: 80%;
 }
@@ -185,7 +188,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -395,6 +397,9 @@ figure {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+}
+.gatsby-image-wrapper {
+  min-width:400px;
 }
 pre {
   margin-left: 0;
