@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Img from 'gatsby-image';
+import './index.css';
 
 
 const IndexPage = () => (
@@ -17,13 +18,20 @@ const IndexPage = () => (
             }
           }
     }
+    CSS: file(relativePath: {eq:"CSS.3.png"}){
+      childImageSharp{
+        fluid(maxWidth:300){
+          ...GatsbyImageSharpFluid
+        }
+      }
+}
   }
     `} render={(data) => {
-      console.log('data', data.faceShot);
+      console.log('data', data);
       return (
         <Layout>
           {/* image and profile container*/}
-          <div style={{ display: 'flex', textAlign: 'center' }}>
+          <div className='profile' style={{ display: 'flex', textAlign: 'center' }}>
             <Img fluid={data.faceShot.childImageSharp.fluid} />
 
             <div style={{ backgroundColor: '', alignSelf: 'center', justifyContent: 'center' }}>
@@ -50,7 +58,7 @@ const IndexPage = () => (
             </div>
           </div>
           {/* stack container */}
-          <section style={{
+          <section className='stack-container' style={{
             display: 'flex',
             height: '600px',
             backgroundColor: 'silver'
@@ -95,7 +103,7 @@ const IndexPage = () => (
                   {
                     listStyle: 'none'
                   }}>
-                  <li>react</li>
+                  <li ><Img fluid={data.CSS.childImageSharp.fluid} /></li>
                   <li>html</li>
                   <li>css</li>
                 </ul>
