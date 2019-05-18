@@ -1,6 +1,7 @@
 
 .stack-container .gatsby-image-wrapper {
-  max-width:100px;
+  max-width:75px;
+  margin: 0 auto 0 auto;
 }
 
 .front-end-stack ul li{

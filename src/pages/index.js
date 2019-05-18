@@ -25,6 +25,20 @@ const IndexPage = () => (
         }
       }
 }
+react: file(relativePath: {eq:"react.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+html: file(relativePath: {eq:"html.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
   }
     `} render={(data) => {
       console.log('data', data);
@@ -104,8 +118,8 @@ const IndexPage = () => (
                     listStyle: 'none'
                   }}>
                   <li ><Img fluid={data.CSS.childImageSharp.fluid} /></li>
-                  <li>html</li>
-                  <li>css</li>
+                  <li ><Img fluid={data.react.childImageSharp.fluid} /></li>
+                  <li ><Img fluid={data.html.childImageSharp.fluid} /></li>
                 </ul>
               </div>
               <div className='back-end-stack' style={{ backgroundColor: 'red', flexGrow: 1 }}>
