@@ -7,6 +7,8 @@ import Img from 'gatsby-image';
 import './index.css';
 import Stack from '../components/Stack';
 import Tab from '../components/Tab';
+import Section from '../components/Section';
+import Profile from '../components/Profile';
 
 
 const IndexPage = () => (
@@ -92,73 +94,12 @@ npm: file(relativePath: {eq:"npm.png"}){
 }
   }
     `} render={(data) => {
-      const frontEnd = {
-        title:'FRONT END',
-        imgArray: [data.CSS.childImageSharp.fluid, data.react.childImageSharp.fluid, data.html.childImageSharp.fluid ]
-      };
-      const backEnd = {
-        title:'BACK END',
-        imgArray: [data.node.childImageSharp.fluid, data.mongo.childImageSharp.fluid, data.express.childImageSharp.fluid, data.firebase.childImageSharp.fluid ]
-      }
-      const tools = {
-        title:'TOOLS',
-        imgArray: [data.github.childImageSharp.fluid, data.jest.childImageSharp.fluid, data.npm.childImageSharp.fluid ]
-      }
-      console.log('data', data);
       return (
         <Layout>
-          {/* image and profile container*/}
-          <div className='profile' style={{ display: 'flex', textAlign: 'center' }}>
-            <Img fluid={data.faceShot.childImageSharp.fluid} />
-
-            <div style={{ backgroundColor: '', alignSelf: 'center', justifyContent: 'center' }}>
-              <p style={
-                {
-                  margin: ' 0 0 0 30px',
-                  padding: '20px 0 0 0 ',
-                  textAlign: 'left',
-                  fontSize: '50px'
-                }}>"</p>
-              <p style={{ fontSize: '30px', margin: '30px' }}>
-                Full Stack Software Developer with a
-                passion for diving under the hood to get a
-                deeper understanding on new technology.
-                When I'm not helping my friends fix something
-                 they broke, you can find me enjoying the outdoors.
-              </p>
-              <p style={{
-                textAlign: 'right',
-                fontSize: '50px',
-                marginRight: '30px',
-                padding: '0 0 30px 0'
-              }}>"</p>
-            </div>
-          </div>
-          {/* stack container */}
-          <section className='stack-container' style={{
-            display: 'flex',
-            height: '600px',
-            backgroundColor: 'silver'
-
-          }}>
-            <Tab title='MY STACK'/>
-            <section className='stack' style={
-              {
-                display: 'flex',
-                flexGrow: '1'
-
-              }
-            }>
-            <Stack title={frontEnd.title} imgArray={frontEnd.imgArray}/>
-            <Stack title={backEnd.title} imgArray={backEnd.imgArray}/>
-            <Stack title={tools.title} imgArray={tools.imgArray}/>
-            </section>
-          </section>
-
-
+          <Profile data={data}/>
+          <Section className='stack-container' tabTitle='MY STACK' data={data}/>
           <Link to="/page-2">Go back to the homepage</Link>
         </Layout>
-
       )
     }} />
 
