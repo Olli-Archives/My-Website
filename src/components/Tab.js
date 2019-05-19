@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TabIndicator from '../images/tabIndicator.svg';
+import TabIndicator from '../images/bracket.svg';
+import './tab.css';
 
 export default function Tab({ title }) {
 
@@ -18,17 +19,13 @@ export default function Tab({ title }) {
       }
     }>
       <TabIndicator style={{
-        height: '100%',
-        width: '100px',
-        img{
-          height:'100%'
-        }
-
+   
       }} />
       <h2 style={{
         color: '#9c0',
         alignSelf: 'center',
-        margin: 'auto',
+      
+
         fontSize: '50px'
       }}>{title}</h2>
     

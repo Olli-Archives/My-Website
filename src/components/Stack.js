@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image'
+
+
 export default function Stack({ title, imgArray }) {
   console.log('title', title, 'array', imgArray);
   const images = imgArray.map(image => {

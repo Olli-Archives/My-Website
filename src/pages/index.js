@@ -10,6 +10,7 @@ import Tab from '../components/Tab';
 import Section from '../components/Section';
 import Profile from '../components/Profile';
 import Projects from '../components/Projects';
+import Contacts from '../components/Contacts';
 
 
 const IndexPage = () => (
@@ -94,14 +95,22 @@ npm: file(relativePath: {eq:"npm.png"}){
     }
   }
 }
+phone: file(relativePath: {eq:"contacts_tele.png"}){
+  childImageSharp{
+    fluid(maxWidth:300){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
   }
     `
   } render={(data) => {
       return (
         <Layout>
           <Profile data={data}/>
-          <Section className='stack-container' tabTitle='MY STACK' data={data}/>
-          <Projects className='projects-container' tabTitle='MAKING' data={data}/>
+          <Contacts data={data}/>
+          <Section className='stack-container' tabTitle='STACK' data={data}/>
+          <Projects className='projects-container' tabTitle='DEV' data={data}/>
           <Link to="/page-2">Go back to the homepage</Link>
         </Layout>
       )
