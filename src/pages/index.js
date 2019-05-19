@@ -9,9 +9,11 @@ import Stack from '../components/Stack';
 import Tab from '../components/Tab';
 import Section from '../components/Section';
 import Profile from '../components/Profile';
+import Projects from '../components/Projects';
 
 
 const IndexPage = () => (
+
 
   <StaticQuery query={graphql`
   {
@@ -93,11 +95,13 @@ npm: file(relativePath: {eq:"npm.png"}){
   }
 }
   }
-    `} render={(data) => {
+    `
+  } render={(data) => {
       return (
         <Layout>
           <Profile data={data}/>
           <Section className='stack-container' tabTitle='MY STACK' data={data}/>
+          <Projects className='projects-container' tabTitle='MAKING' data={data}/>
           <Link to="/page-2">Go back to the homepage</Link>
         </Layout>
       )

@@ -4,6 +4,7 @@ import Tab from './Tab';
 import Stack from './Stack';
 
 
+
 export default function Section({ className, tabTitle, data }) {
   const frontEnd = {
     title: 'FRONT END',
@@ -22,16 +23,18 @@ export default function Section({ className, tabTitle, data }) {
     <section className={className} style={{
       display: 'flex',
       height: '600px',
-      backgroundColor: 'silver'
+ 
     }}>
       <Tab title={tabTitle} />
       <section className='stack' style={
         {
           display: 'flex',
-          flexGrow: '1'
+          flexGrow: '1',
+          color: 'white'
 
         }
       }>
+   
         <Stack title={frontEnd.title} imgArray={frontEnd.imgArray} />
         <Stack title={backEnd.title} imgArray={backEnd.imgArray} />
         <Stack title={tools.title} imgArray={tools.imgArray} />

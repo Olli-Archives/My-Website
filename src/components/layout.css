@@ -4,6 +4,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  background-color: #2A2A2E;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -73,6 +74,9 @@ main{
 }
 small {
   font-size: 80%;
+}
+.stack svg{
+  height:500px;
 }
 sub,
 sup {
