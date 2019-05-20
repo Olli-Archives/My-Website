@@ -11,6 +11,13 @@ import Section from '../components/Section';
 import Profile from '../components/Profile';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import {  faCoffee, faPhone } from '@fortawesome/free-solid-svg-icons';
+
+
+ 
+library.add(fab, faCoffee, faPhone );
 
 
 const IndexPage = () => (
@@ -95,7 +102,7 @@ npm: file(relativePath: {eq:"npm.png"}){
     }
   }
 }
-phone: file(relativePath: {eq:"contacts_tele.png"}){
+phone: file(relativePath: {eq:"phone-white.jpg"}){
   childImageSharp{
     fluid(maxWidth:300){
       ...GatsbyImageSharpFluid
@@ -110,8 +117,9 @@ phone: file(relativePath: {eq:"contacts_tele.png"}){
           <Profile data={data}/>
           <Contacts data={data}/>
           <Section className='stack-container' tabTitle='STACK' data={data}/>
-          <Projects className='projects-container' tabTitle='DEV' data={data}/>
+          <Projects className='projects-container' tabTitle='PROJECTS' data={data}/>
           <Link to="/page-2">Go back to the homepage</Link>
+        
         </Layout>
       )
     }} />

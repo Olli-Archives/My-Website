@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 export default function Stack({ title, imgArray }) {
   console.log('title', title, 'array', imgArray);
   const images = imgArray.map(image => {
-    return <li><Img fluid={image}/></li>
+    return <li><Img fluid={image} /></li>
   })
 
   return (
@@ -15,20 +15,28 @@ export default function Stack({ title, imgArray }) {
       color: 'white',
       flexGrow: 1,
       textAlign: 'center',
-      borderBottom: '1px solid white',
-      marginBottom: '30px'
+      marginBottom: '30px',
+      display:'flex',
+      flexDirection:'column'
 
     }}>
-      <h2 style={{
-                  marginTop: '30px',
-                  fontSize: '30px'
-                }}>{title}</h2>
-      <ul style={
-                  {
-                    listStyle: 'none'
-                  }}>
-        {images}
-      </ul>
+      <p style={{
+        color: '#99CC00',
+        marginTop: '30px',
+        fontSize: '30px'
+      }}>{title}</p>
+
+      <div style={{display:'flex', justifyContent:'center', heigth:'100%', flexGrow:'1'}}>
+        <ul style={
+          {
+            listStyle: 'none',
+            margin: 'auto'
+          }}>
+          {images}
+        </ul>
+      </div>
+
+
     </div>
   )
 

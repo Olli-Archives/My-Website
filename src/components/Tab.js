@@ -8,7 +8,7 @@ export default function Tab({ title }) {
   return (
     <div className='tab' style={
       {
-        width: '125px',
+        width: '100px',
         backgroundColor: '#2A2A2E',
         writingMode: 'vertical-rl',
         textOrientation: 'upright',
@@ -19,15 +19,14 @@ export default function Tab({ title }) {
       }
     }>
       <TabIndicator style={{
-   
+      minHeight:'100px'
       }} />
-      <h2 style={{
+      <p style={{
         color: '#9c0',
         alignSelf: 'center',
-      
-
-        fontSize: '50px'
-      }}>{title}</h2>
+        fontSize:'30px'
+ 
+      }}>{title}</p>
     
     </div>
   )

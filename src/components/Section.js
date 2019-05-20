@@ -22,7 +22,7 @@ export default function Section({ className, tabTitle, data }) {
   return (
     <section className={className} style={{
       display: 'flex',
-      height: '600px',
+     
  
     }}>
       <Tab title={tabTitle} />

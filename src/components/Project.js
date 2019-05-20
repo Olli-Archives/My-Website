@@ -1,5 +1,5 @@
 import React from 'react';
-export default function Project() {
+export default function Project({about, image, title}) {
   return (
     <section style={{
       flexGrow: 1,
@@ -7,11 +7,15 @@ export default function Project() {
       display: 'flex'
 
     }}>
-      <div style={{ flexGrow: 2, backgroundColor: 'purple' }}>
+      <div style={{ flexGrow: 2, backgroundColor: '2a2a2e' }}>
         <ul>
-          <li><h2>Studio Taimela</h2></li>
-          <li><p>
-              We are Excited to be collaborating with Studio Taimela in creating their olince precense.
+          <li><h2 style={{
+        color: '#99CC00',
+        marginTop: '30px',
+        fontSize: '30px',
+      }}>{title}:</h2></li>
+          <li><p style={{textAlign: 'left', fontSize: '25px'}}>
+             {about}
             </p></li>
  
         </ul>
