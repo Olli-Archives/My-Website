@@ -17,7 +17,7 @@ export default function Contacts({ data }) {
   return (
     <section id='contacts'>
       <Tab title='CONTACT'/>
-      <ul style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+      <ul style={{display:'flex', flexDirection:'column', justifyContent:'center', alignSelf:'center'}}>
         {contactInfo}
       </ul>
 

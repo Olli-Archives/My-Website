@@ -24,7 +24,7 @@ export default function Tab({ title }) {
       <p style={{
         color: '#9c0',
         alignSelf: 'center',
-        fontSize:'30px'
+        fontSize:'25px'
  
       }}>{title}</p>
     

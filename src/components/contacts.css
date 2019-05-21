@@ -1,7 +1,6 @@
 #contacts{
   display:flex;
   height: 250px;
-  margin-bottom: 30px;
 }
 
 li{
@@ -12,7 +11,7 @@ li{
 li p{
 
  align-self: center;
- font-size: 40px;
+ font-size: 25px;
  margin-left:20px;
  
 }

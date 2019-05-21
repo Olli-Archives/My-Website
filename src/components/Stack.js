@@ -17,13 +17,15 @@ export default function Stack({ title, imgArray }) {
       textAlign: 'center',
       marginBottom: '30px',
       display:'flex',
-      flexDirection:'column'
+      flexDirection:'column',
+      flexBasis: '0'
 
     }}>
       <p style={{
         color: '#99CC00',
         marginTop: '30px',
-        fontSize: '30px'
+        fontSize: '22px',
+        letterSpacing: '8px'
       }}>{title}</p>
 
       <div style={{display:'flex', justifyContent:'center', heigth:'100%', flexGrow:'1'}}>

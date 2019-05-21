@@ -9,11 +9,12 @@ export default function Project({about, image, title}) {
     }}>
       <div style={{ flexGrow: 2, backgroundColor: '2a2a2e' }}>
         <ul>
-          <li><h2 style={{
+          <li><p style={{
         color: '#99CC00',
         marginTop: '30px',
-        fontSize: '30px',
-      }}>{title}:</h2></li>
+        fontSize: '22px',
+        letterSpacing: '8px'
+      }}>{title}:</p></li>
           <li><p style={{textAlign: 'left', fontSize: '25px'}}>
              {about}
             </p></li>

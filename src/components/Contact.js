@@ -7,11 +7,11 @@ export default function Contact({ contactArray }) {
   function RenderIcon({contact}){
     if(contact.type === 'brand'){
       console.log('rendering', contact.image);
-      return <FontAwesomeIcon style={{color: "white", fontSize: '40px'}} icon={['fab', contact.image]}/>
+      return <FontAwesomeIcon style={{color: "white", fontSize: '25px', alignSelf: 'center'}} icon={['fab', contact.image]}/>
     }
     else{
       console.log('rendering', contact.image);
-      return <FontAwesomeIcon icon={contact.image}  style={{color: "white", fontSize: '40px'}}/>
+      return <FontAwesomeIcon icon={contact.image}  style={{color: "white", fontSize: '25px', alignSelf: 'center'}}/>
     }
   }
 

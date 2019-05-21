@@ -17,8 +17,8 @@ export default function Projects({ className, tabTitle }) {
     <section className={className} style={{
       display: 'flex',
       flexDirection: 'row',
-
-      backgroundColor: '#2A2A2E'
+      backgroundColor: '#2A2A2E',
+      borderBottom: 'green'
     }}>
       <Tab title={tabTitle} />
       <div style={{display:'flex', flexDirection:'column'}}>
