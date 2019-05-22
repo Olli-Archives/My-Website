@@ -95,3 +95,13 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## REACTIVE DESIGN NOTE
+
+1.  DESKTOP BREAKPOINT = 1024
+2.  TABLET BREAKPINT = 720
+3.  MOBILE BREAKPOINT = 320
+
+## DYNAMIC STYLE DESIGN NOTE
+ **DESIGN WAS FOLLOWING THIS**
+1. REF https://medium.com/@PostgradExpat/animating-elements-react-components-in-gatsby-js-with-aos-scrollmonitor-react-and-classnames-c1531b5a7886

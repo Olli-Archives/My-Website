@@ -7,7 +7,9 @@ import Img from 'gatsby-image';
 export default function Profile({ data }) {
 
   return (
-    <div className='profile' style={{ color: 'white', display: 'flex', textAlign: 'center', paddingBottom: '20px',marginBottom: '20px', borderBottom: '1px solid #8FBE0D' }}>
+    <>
+    <div style={{height:'120px'}}></div>
+    <div className='profile' style={{ color: 'white', display: 'flex', textAlign: 'center', paddingBottom: '20px',marginBottom: '20px', borderBottom: '1px solid #8FBE0D'}}>
       <Img fluid={data.faceShot.childImageSharp.fluid} />
 
       <div style={{ backgroundColor: '', alignSelf: 'center', justifyContent: 'center' }}>
@@ -33,6 +35,7 @@ export default function Profile({ data }) {
         }}>"</p> */}
       </div>
     </div>
+</>
   )
 }
 

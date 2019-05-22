@@ -6,11 +6,13 @@ import Logo from "../images/logo.svg"
 const Header = () => (
   <header
     style={{
-      background: '#2A2A2E',
+      background: '#99CC00',
       marginBottom: `1.45rem`,
       display: 'flex',
       flexDirection: 'row',
-      borderBottom: '1px solid #8FBE0D'
+      position:'fixed',
+      zIndex: '99',
+      width: '100%'
     }}
   >
  
