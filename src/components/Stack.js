@@ -21,6 +21,8 @@ export default function Stack({ title, imgArray }) {
       flexBasis: '0'
 
     }}>
+
+      <section>
       <p style={{
         color: '#99CC00',
         marginTop: '30px',
@@ -37,6 +39,9 @@ export default function Stack({ title, imgArray }) {
           {images}
         </ul>
       </div>
+
+
+      </section>
 
 
     </div>

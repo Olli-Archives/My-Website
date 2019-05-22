@@ -20,20 +20,20 @@ export default function Section({ className, tabTitle, data }) {
   }
 
   return (
-    <section className={className} style={{
+    <section className={className} css={{
       display: 'flex',
-     
- 
+      flexDirection: 'column',
     }}>
       <Tab title={tabTitle} />
-      <section className='stack' style={
-        {
+      <section className='stack' css={{
           display: 'flex',
+          flexDirection:'column',
           flexGrow: '1',
-          color: 'white'
-
-        }
-      }>
+          color: 'white',
+          '@media (min-width: 720px)': {
+            flexDirection: `row`,
+          }
+      }}>
    
         <Stack title={frontEnd.title} imgArray={frontEnd.imgArray} />
         <Stack title={backEnd.title} imgArray={backEnd.imgArray} />

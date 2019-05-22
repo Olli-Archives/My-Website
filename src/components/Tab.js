@@ -12,12 +12,12 @@ import Style from '../dynamic-style/Style.js';
 
 
 
-function Tab({ title, isInViewport }) {
+function Tab({ title }) {
 
 
 
 
-  const className = `tab-${isInViewport}`;
+  const className = `tab`;
   return (
     <div className={className} style={
       {
@@ -30,8 +30,12 @@ function Tab({ title, isInViewport }) {
         
       }
     }>
-      <TabIndicator style={{
-      minHeight:'100px'
+      <TabIndicator css={{
+        minHeight: '100px',
+        display:'none',
+        '@media (min-width: 720px)': {
+          display: `block`,
+        },
       }} />
       
       <Style>{title}</Style>

@@ -1,12 +1,7 @@
 
-.tab-false svg{
-  width:70px;
-  height:90%;
-  align-self:center;
-  padding-left:10px;
-}
 
-.tab-true svg{
+
+.tab svg{
   width:700px;
   height:90%;
   align-self:center;

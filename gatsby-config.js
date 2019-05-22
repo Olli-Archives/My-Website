@@ -6,6 +6,7 @@ module.exports = {
     author: `Olli Nieminen`,
   },
   plugins: [
+    `gatsby-plugin-glamor`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

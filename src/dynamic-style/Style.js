@@ -36,7 +36,12 @@ export default Watch(
 
 
       return(
-        <span>
+        <span css={{
+            display:'none',
+          '@media (min-width: 720px)': {
+            display: `block`,
+          },
+        }}>
            { this.props.isInViewport ? (
             <ViewStyle
               aos="fade-up"
