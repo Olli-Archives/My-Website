@@ -34,10 +34,8 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <footer style={{height:'50px', backgroundColor:'#99CC00'}}>
+         <div css={{display:'flex', justifyContent:'center', height:'100%', alignItems:'center'}}> Last Updated: 5/28/2019 </div>
           </footer>
         </div>
       </>

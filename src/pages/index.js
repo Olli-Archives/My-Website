@@ -120,8 +120,6 @@ phone: file(relativePath: {eq:"phone-white.jpg"}){
           <Contacts data={data}/>
           <Section className='stack-container' tabTitle='STACK' data={data}/>
           <Projects className='projects-container' tabTitle='PROJECTS' data={data}/>
-          <Link to="/page-2">Go back to the homepage</Link>
-        
         </Layout>
       )
     }} />
