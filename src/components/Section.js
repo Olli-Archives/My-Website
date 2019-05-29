@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Tab from './Tab';
 import Stack from './Stack';
+import MobileDevider from './MobileDevider';
 
 
 
@@ -20,27 +21,36 @@ export default function Section({ className, tabTitle, data }) {
   }
 
   return (
-    <section className={className} css={{
-      display: 'flex',
-      flexDirection: 'column',
-    }}>
-      <Tab title={tabTitle} />
-      <section className='stack' css={{
+    <>
+    
+      <section className={className} css={{
+        display: 'flex',
+        flexDirection: 'column',
+
+        '@media (min-width: 720px)': {
+          flexDirection: `row`,
+
+        }
+      }}>
+
+        <Tab title={tabTitle} />
+        <section className='stack' css={{
           display: 'flex',
-          flexDirection:'column',
+          flexDirection: 'column',
           flexGrow: '1',
           color: 'white',
           '@media (min-width: 720px)': {
             flexDirection: `row`,
           }
-      }}>
-   
-        <Stack title={frontEnd.title} imgArray={frontEnd.imgArray} />
-        <Stack title={backEnd.title} imgArray={backEnd.imgArray} />
-        <Stack title={tools.title} imgArray={tools.imgArray} />
-      </section>
+        }}>
 
-    </section>
+          <Stack title={frontEnd.title} imgArray={frontEnd.imgArray} />
+          <Stack title={backEnd.title} imgArray={backEnd.imgArray} />
+          <Stack title={tools.title} imgArray={tools.imgArray} />
+        </section>
+
+      </section>
+    </>
   )
 
 }

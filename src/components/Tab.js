@@ -19,14 +19,17 @@ function Tab({ title }) {
 
   const className = `tab`;
   return (
-    <div className={className} style={
+    <div className={className} css={
       {
         width: '100px',
         writingMode: 'vertical-rl',
         textOrientation: 'upright',
         textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column'
+        display: 'none',
+        flexDirection: 'column',
+        '@media (min-width: 720px)': {
+          display: `flex`,
+        }
         
       }
     }>
@@ -34,7 +37,7 @@ function Tab({ title }) {
         minHeight: '100px',
         display:'none',
         '@media (min-width: 720px)': {
-          display: `block`,
+          display: `flex`,
         },
       }} />
       

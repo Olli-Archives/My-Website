@@ -11,7 +11,7 @@ const Header = () => (
       display: 'flex',
       flexDirection: 'row',
       position:'fixed',
-      zIndex: '99',
+      zIndex: '75',
       width: '100%'
     }}
   >
@@ -19,8 +19,8 @@ const Header = () => (
   <div>
     <Logo
     style={{
-      height: '96px',
-      width: '300px'
+      height: '50px',
+      width: '180px'
     }}
     />
   </div>

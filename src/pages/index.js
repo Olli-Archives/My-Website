@@ -11,9 +11,11 @@ import Section from '../components/Section';
 import Profile from '../components/Profile';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
+import Footer from '../components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {  faCoffee, faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 
  

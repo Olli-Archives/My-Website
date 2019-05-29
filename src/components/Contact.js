@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Contact({ contactArray }) {
-  function RenderIcon({contact}){
-    if(contact.type === 'brand'){
+  function RenderIcon({ contact }) {
+    if (contact.type === 'brand') {
       console.log('rendering', contact.image);
-      return <FontAwesomeIcon style={{color: "white", alignSelf: 'center'}} icon={['fab', contact.image]}/>
+      return <FontAwesomeIcon style={{ color: "white", alignSelf: 'center'}} icon={['fab', contact.image]} />
     }
-    else{
+    else {
       console.log('rendering', contact.image);
-      return <FontAwesomeIcon icon={contact.image}  style={{color: "white", alignSelf: 'center'}}/>
+      return <FontAwesomeIcon icon={contact.image} style={{ color: "white", alignSelf: 'center' }} />
     }
   }
 
@@ -19,10 +19,12 @@ export default function Contact({ contactArray }) {
     return (
       <li>
         <div>
-        <RenderIcon contact={contact}/>
+          <a css={{display:'flex', justifyContent:'center', marginRight:'12px'}} href={contact.website}>
+            <RenderIcon contact={contact} />
+          </a>
         </div>
         <div>
-        <p>{contact.contact}</p>
+          <p>{contact.contact}</p>
         </div>
       </li>
     )

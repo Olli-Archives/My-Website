@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
+import MobileDevider from './MobileDevider';
 
 
 export default function Stack({ title, imgArray }) {
@@ -10,41 +11,55 @@ export default function Stack({ title, imgArray }) {
   })
 
   return (
-    <div className='front-end-stack' style={{
+    <>
+    <MobileDevider title={title}/>
+    <div className='front-end-stack' css={{
       backgroundColor: '#2A2A2E',
       color: 'white',
       flexGrow: 1,
       textAlign: 'center',
-      marginBottom: '30px',
-      display:'flex',
-      flexDirection:'column',
-      flexBasis: '0'
-
+      display: 'flex',
+      flexDirection: 'column',
+      flexBasis: '0',
+      '@media (min-width: 720px)': {
+        marginBottom: '30px'
+      }
     }}>
-
       <section>
-      <p style={{
-        color: '#99CC00',
-        marginTop: '30px',
-        fontSize: '22px',
-        letterSpacing: '8px'
-      }}>{title}</p>
-
-      <div style={{display:'flex', justifyContent:'center', heigth:'100%', flexGrow:'1'}}>
-        <ul style={
+        
+        <p css={{
+          display: 'none',
+          color: '#99CC00',
+          marginTop: '30px',
+          fontSize: '22px',
+          letterSpacing: '8px',
+          '@media (min-width: 720px)': {
+            display: `block`,
+          },
+        }}>{title}</p>
+        <div css={
           {
-            listStyle: 'none',
-            margin: 'auto'
+            display: 'flex',
+            justifyContent: 'center',
+            heigth: '100%',
+            flexGrow: '1',     
           }}>
-          {images}
-        </ul>
-      </div>
-
-
+          <ul css={
+            {
+              listStyle: 'none',
+              width:'100%',
+              display:'flex',
+              justifyContent:'space-between',
+              '@media (min-width: 720px)': {
+                flexDirection: `column`,
+              }  
+            }}>
+            {images}
+          </ul>
+        </div>
       </section>
-
-
     </div>
+    </>
   )
 
 }

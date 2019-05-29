@@ -1,6 +1,8 @@
 import React from 'react';
 import Tab from './Tab';
 import Project from './Project';
+import MobileDevider from './MobileDevider';
+
 
 export default function Projects({ className, tabTitle }) {
 
@@ -14,18 +16,21 @@ export default function Projects({ className, tabTitle }) {
    This app is powered by the USGS API, and the back end is powered by Firebase.`;
 
   return (
-    <section className={className} style={{
-      display: 'flex',
-      flexDirection: 'row',
-      backgroundColor: '#2A2A2E',
-      borderBottom: 'green'
-    }}>
-      <Tab title={tabTitle} />
-      <div style={{display:'flex', flexDirection:'column'}}>
-        <Project about={studioTaimela} title='STUDIO TAIMELA' />
-        <Project about={usgsRiverData} title='USGS RIVER DATA' />
-      </div>
+    <>
+      <MobileDevider title='WORKING ON' />
+      <section className={className} style={{
+        display: 'flex',
+        flexDirection: 'row',
+        backgroundColor: '#2A2A2E',
+        borderBottom: 'green'
+      }}>
+        <Tab title={tabTitle} />
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Project about={studioTaimela} title='STUDIO TAIMELA' />
+          <Project about={usgsRiverData} title='USGS RIVER DATA' />
+        </div>
 
-    </section>
+      </section>
+    </>
   )
 }
