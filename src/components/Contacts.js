@@ -21,10 +21,11 @@ export default function Contacts({ data }) {
       <section id='contacts'
         css={{
           flexDirection: 'column',
+          padding: '25px 0 25px 0',
           '@media (min-width: 720px)': {
             display: `row`,
             flexDirection: 'row',
-            marginTop:0,
+          
             borderBottom: 'none'
           },
         }}

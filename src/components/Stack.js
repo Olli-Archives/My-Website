@@ -50,6 +50,7 @@ export default function Stack({ title, imgArray }) {
               width:'100%',
               display:'flex',
               justifyContent:'space-between',
+              padding:'25px 0 25px 0',
               '@media (min-width: 720px)': {
                 flexDirection: `column`,
               }  
