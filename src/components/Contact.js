@@ -15,9 +15,9 @@ export default function Contact({ contactArray }) {
     }
   }
 
-  const contact = contactArray.map(contact => {
+  const contact = contactArray.map((contact, i) => {
     return (
-      <li>
+      <li key={i}>
         <div>
           <a css={{display:'flex', justifyContent:'center', marginRight:'12px'}} href={contact.website}>
             <RenderIcon contact={contact} />

@@ -12,12 +12,13 @@ const ViewStyle = props => (
 );
 
 export default Watch(
-  class Style extends React.Component {
+  class Style extends Component {
 
     componentDidMount() {
       this.aos = AOS;
       this.aos.init({
-        duration: 2000
+        duration: 1200,
+   
       });
     }
 
@@ -29,8 +30,7 @@ export default Watch(
 
       const aosClass = classNames({
         "aos-init": true,
-        "viewport-purple": !this.props.isInViewport,
-        "aos-animate viewport-blue": this.props.isInViewport
+  
       });
 
 
@@ -40,6 +40,10 @@ export default Watch(
             display:'none',
           '@media (min-width: 720px)': {
             display: `block`,
+            color:'#9c0',
+            alignSelf: 'center',
+            fontSize: '25px',
+            margin: 'auto 0 auto 0'
           },
         }}>
            { this.props.isInViewport ? (
@@ -52,7 +56,8 @@ export default Watch(
             <ViewStyle
               aos="fade-down"
               componentStyle={ aosClass }
-              text="you dont see me!"
+              text={this.props.children}
+       
             />
           )}
         </span>

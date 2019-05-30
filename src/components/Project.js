@@ -16,14 +16,15 @@ export default function Project({ about, image, title }) {
           <ul>
             <li><p style={{
               color: '#99CC00',
-              marginTop: '30px',
-              fontSize: '22px',
+              marginTop: '25px',
+              fontSize: '16px',
               letterSpacing: '8px'
             }}>{title}:</p></li>
             <li><p css={
               {
                 textAlign: 'left',
                 fontSize: '14px',
+                paddingBottom: '30px',
                 '@media (min-width: 720px)': {
                   fontSize: '25px'
                 }
@@ -33,9 +34,6 @@ export default function Project({ about, image, title }) {
 
           </ul>
         </div>
-        
-
       </section>
- 
   )
 }

@@ -5,6 +5,7 @@ import MobileDevider from './MobileDevider';
 
 
 export default function Stack({ title, imgArray }) {
+  console.log('imgArray', imgArray);
   console.log('title', title, 'array', imgArray);
   const images = imgArray.map(image => {
     return <li><Img fluid={image} /></li>
@@ -52,7 +53,7 @@ export default function Stack({ title, imgArray }) {
               justifyContent:'space-between',
               padding:'25px 0 25px 0',
               '@media (min-width: 720px)': {
-                flexDirection: `column`,
+              flexDirection: `column`,
               }  
             }}>
             {images}

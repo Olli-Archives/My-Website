@@ -17,7 +17,7 @@ export default function Contacts({ data }) {
 
   return (
     <>
-    <MobileDevider title='CONTAC'/>
+      <MobileDevider title='CONTAC' />
       <section id='contacts'
         css={{
           flexDirection: 'column',
@@ -25,12 +25,12 @@ export default function Contacts({ data }) {
           '@media (min-width: 720px)': {
             display: `row`,
             flexDirection: 'row',
-          
+
             borderBottom: 'none'
           },
         }}
       >
-      
+
         <Tab title='CONTACT' />
         <ul css={{
           display: 'flex',

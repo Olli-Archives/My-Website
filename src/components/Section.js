@@ -26,6 +26,7 @@ export default function Section({ className, tabTitle, data }) {
       <section className={className} css={{
         display: 'flex',
         flexDirection: 'column',
+    
 
         '@media (min-width: 720px)': {
           flexDirection: `row`,

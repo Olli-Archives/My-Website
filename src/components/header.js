@@ -5,14 +5,17 @@ import Logo from "../images/logo.svg"
 
 const Header = () => (
   <header
-    style={{
+    css={{
       background: '#99CC00',
       marginBottom: `1.45rem`,
       display: 'flex',
       flexDirection: 'row',
       position:'fixed',
       zIndex: '75',
-      width: '100%'
+      width: '100%',
+      '@media (min-width: 720px)': {
+        display: 'none',
+      }
     }}
   >
  

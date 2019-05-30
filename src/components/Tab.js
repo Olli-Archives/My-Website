@@ -1,6 +1,4 @@
 import React from 'react';
-import AOS from 'aos';
-import classNames from 'classnames';
 import 'aos/dist/aos.css'
 import './tab.css';
 import { Watch } from 'scrollmonitor-react';
@@ -11,15 +9,9 @@ import Style from '../dynamic-style/Style.js';
 
 
 
-
 function Tab({ title }) {
-
-
-
-
-  const className = `tab`;
   return (
-    <div className={className} css={
+    <div className='tab' css={
       {
         width: '100px',
         writingMode: 'vertical-rl',
@@ -29,8 +21,7 @@ function Tab({ title }) {
         flexDirection: 'column',
         '@media (min-width: 720px)': {
           display: `flex`,
-        }
-        
+        }     
       }
     }>
       <TabIndicator css={{
@@ -39,11 +30,9 @@ function Tab({ title }) {
         '@media (min-width: 720px)': {
           display: `flex`,
         },
-      }} />
-      
+      }} />   
       <Style>{title}</Style>
   
-    
     </div>
   )
 

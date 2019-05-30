@@ -1,17 +1,11 @@
-import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import Img from 'gatsby-image';
+import React from "react";
+import {StaticQuery, graphql } from "gatsby";
+import Layout from "../components/layout";
 import './index.css';
-import Stack from '../components/Stack';
-import Tab from '../components/Tab';
 import Section from '../components/Section';
 import Profile from '../components/Profile';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
-import Footer from '../components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {  faCoffee, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -118,6 +112,7 @@ phone: file(relativePath: {eq:"phone-white.jpg"}){
         <Layout>
           <Profile data={data}/>
           <Contacts data={data}/>
+       
           <Section className='stack-container' tabTitle='STACK' data={data}/>
           <Projects className='projects-container' tabTitle='PROJECTS' data={data}/>
         </Layout>
