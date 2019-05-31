@@ -34,7 +34,7 @@ export default function Profile({ data }) {
           }} />
           <div css={{
             '@media (min-width: 720px)': {
-              backgroundColor: '8E8686',
+              backgroundColor: '7a7373',
               width: '100%',
               alignSelf: 'center',
               height: '100px',
