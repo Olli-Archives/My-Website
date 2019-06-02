@@ -54,7 +54,7 @@ they broke, you can find me enjoying the outdoors.`
         </BackgroundImage>
       </section>
       <section css={{
-        display: 'block',
+      
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
