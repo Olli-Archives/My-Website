@@ -69,9 +69,7 @@ mark {
   background-color: #ff0;
   color: #000;
 }
-main{
-  margin:0 20px 0 20px;
-}
+
 small {
   font-size: 80%;
 }
@@ -91,9 +89,7 @@ sub {
 sup {
   top: -0.5em;
 }
-img {
-  border-style: none;
-}
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -205,7 +201,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  // color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;

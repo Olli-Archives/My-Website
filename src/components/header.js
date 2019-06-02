@@ -14,7 +14,7 @@ const Header = () => (
       zIndex: '75',
       width: '100%',
       '@media (min-width: 720px)': {
-        display: 'none',
+        // display: 'none',
       }
     }}
   >

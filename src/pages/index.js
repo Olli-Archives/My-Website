@@ -21,7 +21,7 @@ const IndexPage = () => (
 
   <StaticQuery query={graphql`
   {
-    faceShot: file(relativePath: {eq:"OllieNieminen.jpg"}){
+    faceShot: file(relativePath: {eq:"OllieNieminen.png"}){
           childImageSharp{
             fluid(maxWidth:1600){
               ...GatsbyImageSharpFluid
@@ -98,6 +98,20 @@ npm: file(relativePath: {eq:"npm.png"}){
     }
   }
 }
+banner: file(relativePath: {eq:"banner.jpg"}){
+  childImageSharp{
+    fluid(maxWidth:1400){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
+  childImageSharp{
+    fluid(maxWidth:1400){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
 phone: file(relativePath: {eq:"phone-white.jpg"}){
   childImageSharp{
     fluid(maxWidth:300){
@@ -112,7 +126,6 @@ phone: file(relativePath: {eq:"phone-white.jpg"}){
         <Layout>
           <Profile data={data}/>
           <Contacts data={data}/>
-       
           <Section className='stack-container' tabTitle='STACK' data={data}/>
           <Projects className='projects-container' tabTitle='PROJECTS' data={data}/>
         </Layout>

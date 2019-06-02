@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer style={{height:'50px', backgroundColor:'#99CC00'}}>
+          <footer style={{height:'50px', backgroundColor:'#99CC00', marginTop:'30px'}}>
          <div css={{display:'flex', justifyContent:'center', height:'100%', alignItems:'center'}}> Last Updated: 5/28/2019 </div>
           </footer>
         </div>

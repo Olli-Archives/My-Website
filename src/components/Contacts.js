@@ -17,9 +17,10 @@ export default function Contacts({ data }) {
 
   return (
     <>
-      <MobileDevider title='CONTAC' />
+      <MobileDevider title='CONTACT' />
       <section id='contacts'
         css={{
+          margin: '0 20px 0 20px',
           flexDirection: 'column',
           padding: '25px 0 25px 0',
           '@media (min-width: 720px)': {

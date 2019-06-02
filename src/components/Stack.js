@@ -8,13 +8,14 @@ export default function Stack({ title, imgArray }) {
   console.log('imgArray', imgArray);
   console.log('title', title, 'array', imgArray);
   const images = imgArray.map(image => {
-    return <li><Img fluid={image} /></li>
+    return <li css={{alignSelf:'center'}}><Img fluid={image} /></li>
   })
 
   return (
     <>
     <MobileDevider title={title}/>
     <div className='front-end-stack' css={{
+      
       backgroundColor: '#2A2A2E',
       color: 'white',
       flexGrow: 1,
