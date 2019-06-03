@@ -33,7 +33,7 @@ they broke, you can find me enjoying the outdoors.`
 
             <Img fluid={data.faceShot.childImageSharp.fluid} css={{
               width: '600px', height: '290px',
-              alignSelf: 'flex-end', zIndex: '2', shapeOutside: 'circle()',
+              alignSelf: 'flex-end', zIndex: '2'
             }} />
 
             <div css={{
@@ -58,13 +58,12 @@ they broke, you can find me enjoying the outdoors.`
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-
         '@media (min-width: 720px)': {
           display: 'none'
         }}}>
              <Img fluid={data.smallProfile.childImageSharp.fluid} css={{
               width: '100%', height: 'auto',
-               zIndex: '2', shapeOutside: 'circle()'
+               zIndex: '2'
             }} />
             <p css={{
              padding:'30px 20px 0 20px',
