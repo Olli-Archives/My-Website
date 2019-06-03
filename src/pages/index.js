@@ -124,7 +124,7 @@ phone: file(relativePath: {eq:"phone-white.jpg"}){
   } render={(data) => {
       return (
         <Layout>
-          {/* <Profile data={data}/> */}
+          <Profile data={data}/>
           <Contacts data={data}/>
           <Section className='stack-container' tabTitle='STACK' data={data}/>
           <Projects className='projects-container' tabTitle='PROJECTS' data={data}/>
