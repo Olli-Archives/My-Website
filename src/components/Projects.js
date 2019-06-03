@@ -13,7 +13,7 @@ export default function Projects({ className, tabTitle }) {
   return (
     <>
       <MobileDevider title='WORKING ON' />
-      <section className={className} style={{
+      <section className={className} css={{
         margin: '0 20px 0 20px',
         display: 'flex',
         flexDirection: 'row',
@@ -21,7 +21,7 @@ export default function Projects({ className, tabTitle }) {
         borderBottom: 'green'
       }}>
         <Tab title={tabTitle} />
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+        <div css={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
           <Project about={studioTaimela} title='STUDIO TAIMELA' />
 
         </div>

@@ -6,15 +6,15 @@ export default function Project({ about, image, title }) {
   return (
   
     
-      <section style={{
+      <section css={{
         flexGrow: 1,
         textAlign: 'center',
         display: 'flex'
 
       }}>
-        <div style={{ flexGrow: 2, backgroundColor: '2a2a2e' }}>
+        <div css={{ flexGrow: 2, backgroundColor: '2a2a2e' }}>
           <ul css={{height:'100%', display:'flex', flexDirection:'column', justifyContent:'center'}}>
-            <li><p style={{
+            <li><p css={{
               color: '#99CC00',
               marginTop: '25px',
               fontSize: '16px',

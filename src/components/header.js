@@ -21,23 +21,23 @@ const Header = () => (
  
   <div>
     <Logo
-    style={{
+    css={{
       height: '50px',
       width: '180px'
     }}
     />
   </div>
     <div
-      style={{
+    css={{
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 css={{ margin: 0 }}>
         <Link
           to="/"
-          style={{
+          css={{
             color: `white`,
             textDecoration: `none`,
           }}
