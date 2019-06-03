@@ -7,8 +7,8 @@ import MobileDevider from './MobileDevider';
 export default function Stack({ title, imgArray }) {
   console.log('imgArray', imgArray);
   console.log('title', title, 'array', imgArray);
-  const images = imgArray.map(image => {
-    return <li css={{alignSelf:'center'}}><Img fluid={image} /></li>
+  const images = imgArray.map((image, i )=> {
+    return <li key={i} css={{alignSelf:'center'}}><Img fluid={image} /></li>
   })
 
   return (
