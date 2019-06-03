@@ -26,7 +26,6 @@ export default function Contacts({ data }) {
           '@media (min-width: 720px)': {
          
             flexDirection: 'row',
-
             borderBottom: 'none'
           },
         }}
